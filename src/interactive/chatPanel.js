@@ -17,9 +17,9 @@ export function initChatPanel() {
   let hasTypedGreeting = false;
 
   function toggleAiDrawer(open) {
-    const shouldOpen = open !== undefined ? open : aiDrawer.classList.contains('translate-x-full');
+    const shouldOpen = open !== undefined ? open : aiDrawer.classList.contains('-translate-x-full');
     if (shouldOpen) {
-      aiDrawer.classList.remove('translate-x-full');
+      aiDrawer.classList.remove('-translate-x-full');
       aiDrawer.classList.add('translate-x-0');
       if (aiFabBtn) {
         aiFabBtn.classList.add('opacity-0', 'pointer-events-none', 'scale-90');
@@ -30,7 +30,7 @@ export function initChatPanel() {
         hasTypedGreeting = true;
       }
     } else {
-      aiDrawer.classList.add('translate-x-full');
+      aiDrawer.classList.add('-translate-x-full');
       aiDrawer.classList.remove('translate-x-0');
       if (aiFabBtn) {
         aiFabBtn.classList.remove('opacity-0', 'pointer-events-none', 'scale-90');
