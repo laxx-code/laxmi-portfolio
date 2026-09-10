@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+worker/node_modules/
+
+# Production build outputs
+dist/
+dist-ssr/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Cloudflare Wrangler build artifacts
+.wrangler/
+worker/.wrangler/
+
+# IDE / OS junk
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.tmp

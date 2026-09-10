@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Laxmi Raut - AI Engineer & Architect</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body class="antialiased font-body-sm text-on-background bg-background selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+
+  <!-- Waveform Scroll Progress Bar -->
+  <div id="waveform-container" title="Scroll progress waveform"></div>
+
+  <!-- Top Navigation -->
+  <nav class="fixed top-0 left-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 bg-background/80 backdrop-blur-md z-50 border-b border-outline-variant/30 transition-all duration-500">
+    <a class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background tracking-tighter hover:opacity-70 transition-opacity duration-300" href="#">LAXMI RAUT</a>
+    <div class="flex items-center gap-6">
+      <button id="menuBtn" class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-pointer">MENU +</button>
+    </div>
+  </nav>
+
+  <!-- Side Navigation Menu (Drawer) -->
+  <div class="fixed inset-0 z-[60] w-full h-full bg-surface translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-center items-start px-margin-mobile md:px-margin-desktop space-y-6" id="sideNav">
+    <button class="absolute top-8 right-margin-mobile md:right-margin-desktop font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors cursor-pointer" id="closeNav">CLOSE</button>
+    <div class="mb-12">
+      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Laxmi Raut</h2>
+      <p class="font-label-caps text-label-caps text-on-surface-variant">AI Engineer & Architect</p>
+    </div>
+    <nav class="flex flex-col space-y-4">
+      <a class="group flex items-center gap-4 text-primary font-bold italic underline decoration-1 underline-offset-8 hover:pl-4 transition-all duration-500 nav-link" href="#home">
+        <span class="font-label-caps text-label-caps opacity-50">01</span>
+        <span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase">HOME</span>
+        <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">home</span>
+      </a>
+      <a class="group flex items-center gap-4 text-on-surface-variant hover:text-on-surface hover:pl-4 transition-all duration-500 nav-link" href="#what-i-build">
+        <span class="font-label-caps text-label-caps opacity-50">02</span>
+        <span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase">WHAT I BUILD</span>
+        <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">memory</span>
+      </a>
+      <a class="group flex items-center gap-4 text-on-surface-variant hover:text-on-surface hover:pl-4 transition-all duration-500 nav-link" href="#work">
+        <span class="font-label-caps text-label-caps opacity-50">03</span>
+        <span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase">WORK</span>
+        <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">work</span>
+      </a>
+      <a class="group flex items-center gap-4 text-on-surface-variant hover:text-on-surface hover:pl-4 transition-all duration-500 nav-link" href="#experience">
+        <span class="font-label-caps text-label-caps opacity-50">04</span>
+        <span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase">EXPERIENCE</span>
+        <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">history</span>
+      </a>
+      <a class="group flex items-center gap-4 text-on-surface-variant hover:text-on-surface hover:pl-4 transition-all duration-500 nav-link" href="#contact">
+        <span class="font-label-caps text-label-caps opacity-50">05</span>
+        <span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase">CONTACT</span>
+        <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">mail</span>
+      </a>
+    </nav>
+    <div class="mt-12">
+      <a href="#contact" class="bg-primary-container text-on-primary-container px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest magnetic-btn inline-block">Get in Touch</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-32 pb-20 px-margin-mobile md:px-margin-desktop overflow-hidden" id="home">
+      <!-- Background Typography/Texture -->
+      <div class="absolute inset-0 z-0 opacity-5 pointer-events-none flex items-center justify-center overflow-hidden">
+        <span class="font-display-xl text-[20vw] whitespace-nowrap text-on-background leading-none font-bold select-none" style="transform: translateY(-20px);">INTELLIGENCE</span>
+      </div>
+      
+      <div class="relative z-10 w-full max-w-container-max mx-auto grid grid-cols-4 md:grid-cols-12 gap-gutter items-center">
+        <div class="col-span-4 md:col-span-6 flex flex-col justify-center">
+          <p class="font-label-caps text-label-caps text-on-tertiary-container mb-6 tracking-widest reveal-on-scroll">LLMs • SPEECH AI • AGENTIC AI</p>
+          
+          <h1 class="hero-line-reveal font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-background mb-4 leading-tight">LAXMI RAUT</h1>
+          <h2 class="hero-line-reveal font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-8 max-w-2xl">BUILDING INTELLIGENCE FOR THE REAL WORLD.</h2>
+          
+          <div class="font-body-lg text-body-lg text-on-surface-variant max-w-xl space-y-6 reveal-on-scroll">
+            <p>I architect and deploy production-grade LLM applications and sophisticated Speech AI systems. My focus is on crossing the chasm from experimental models to robust, real-world solutions that drive tangible value.</p>
+            <p class="opacity-70 text-sm">Specializing in multi-agent architectures, retrieval-augmented generation, and low-latency audio processing pipelines.</p>
+          </div>
+          
+          <div class="mt-12 flex flex-wrap gap-6 items-center reveal-on-scroll">
+            <a class="btn-sweep-primary px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest flex items-center gap-2 magnetic-btn group" href="#work">
+              VIEW PROJECTS
+              <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+            <a class="text-on-background font-label-caps text-label-caps border-b border-on-background pb-1 hover:text-primary hover:border-primary transition-colors" href="#contact">GET IN TOUCH</a>
+          </div>
+        </div>
+
+        <div class="col-span-4 md:col-span-5 md:col-start-8 mt-16 md:mt-0 relative h-[55vh] md:h-[75vh] reveal-on-scroll">
+          <div class="absolute inset-0 ghost-border p-2">
+            <div class="w-full h-full relative overflow-hidden bg-surface-container-high">
+              <img alt="Laxmi Raut Portrait" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out object-center" src="https://lh3.googleusercontent.com/aida/AEtjO1UVL8g_niEnvasc-rfIp-YBoPxiAHUe86AtZ_YDo0Y5pufYdLvymE58VjPsmzjSDYLs06A6QWNJvrYS9vir-dH5D7P4NVW4b7smDfqgKyas4LDid9lhiJ00VrkK0jfaRfT3yTaf7LLokcsmqEh3_0cp9yY_81ZHk31TV-lT2KaOVemUbo82zjIZdxcREX-EMIVibatQnPxv4LSxbXbgy2c_9poqMV5w1gL--2FCI2_apnkMmcrmqkmZvUM" />
+              <div class="absolute bottom-4 right-4 glass-panel px-4 py-2 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span class="font-label-caps text-label-caps text-on-surface text-[10px]">SYSTEM ONLINE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. WHAT I BUILD -->
+    <section class="py-32 px-margin-mobile md:px-margin-desktop border-t border-outline-variant/30" id="what-i-build">
+      <div class="max-w-container-max mx-auto">
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-16 text-primary reveal-on-scroll">WHAT I BUILD</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <div class="ghost-border p-8 reveal-on-scroll hover:bg-surface-container transition-colors duration-300 project-card group">
+            <span class="font-label-caps text-primary-container mb-4 block text-primary font-bold">01</span>
+            <h3 class="font-headline-lg text-2xl mb-4 group-hover:text-primary transition-colors">Agentic AI</h3>
+            <p class="text-on-surface-variant font-body-lg mb-6">Autonomous systems capable of planning, reasoning, and executing complex workflows through dynamic tool use.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 text-xs font-label-caps ghost-border text-primary tag-pill">LangChain</span>
+              <span class="px-3 py-1 text-xs font-label-caps ghost-border text-primary tag-pill">CrewAI</span>
+            </div>
+          </div>
+
+          <div class="ghost-border p-8 reveal-on-scroll hover:bg-surface-container transition-colors duration-300 project-card group">
+            <span class="font-label-caps text-primary-container mb-4 block text-primary font-bold">02</span>
+            <h3 class="font-headline-lg text-2xl mb-4 group-hover:text-primary transition-colors">Speech AI</h3>
+            <p class="text-on-surface-variant font-body-lg mb-6">End-to-end audio processing pipelines including ASR, Speaker Diarization, and Voice Analytics with ultra-low latency.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 text-xs font-label-caps ghost-border text-primary tag-pill">Whisper</span>
+              <span class="px-3 py-1 text-xs font-label-caps ghost-border text-primary tag-pill">PyAnnote</span>
+            </div>
+          </div>
+
+          <div class="ghost-border p-8 reveal-on-scroll hover:bg-surface-container transition-colors duration-300 project-card group">
+            <span class="font-label-caps text-primary-container mb-4 block text-primary font-bold">03</span>
+            <h3 class="font-headline-lg text-2xl mb-4 group-hover:text-primary transition-colors">Generative AI & RAG</h3>
+            <p class="text-on-surface-variant font-body-lg mb-6">Enterprise-grade retrieval systems that combine proprietary data with foundational models, ensuring factual accuracy.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 text-xs font-label-caps ghost-border text-primary tag-pill">Vector DBs</span>
+              <span class="px-3 py-1 text-xs font-label-caps ghost-border text-primary tag-pill">LlamaIndex</span>
+            </div>
+          </div>
+
+          <div class="ghost-border p-8 reveal-on-scroll hover:bg-surface-container transition-colors duration-300 project-card group">
+            <span class="font-label-caps text-primary-container mb-4 block text-primary font-bold">04</span>
+            <h3 class="font-headline-lg text-2xl mb-4 group-hover:text-primary transition-colors">Edge AI</h3>
+            <p class="text-on-surface-variant font-body-lg mb-6">Optimizing and deploying lightweight models directly on devices for real-time inference without cloud dependency.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 text-xs font-label-caps ghost-border text-primary tag-pill">TensorRT</span>
+              <span class="px-3 py-1 text-xs font-label-caps ghost-border text-primary tag-pill">ONNX</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 & 3. SELECTED WORK & NUANCE CASE STUDY -->
+    <section class="py-32 px-margin-mobile md:px-margin-desktop bg-surface-container-low border-t border-outline-variant/30" id="work">
+      <div class="max-w-container-max mx-auto">
+        <p class="font-label-caps text-label-caps text-on-tertiary-container mb-4 tracking-widest reveal-on-scroll">SELECTED WORK</p>
+        <h2 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl mb-4 reveal-on-scroll">NUANCE <span class="text-2xl md:text-4xl text-on-surface-variant">— Trilingual AI Meeting Assistant</span></h2>
+        <p class="font-label-caps text-primary tracking-widest mb-16 reveal-on-scroll">ENGLISH • HINDI • MARATHI</p>
+
+        <!-- Pinned Architecture Pipeline -->
+        <div id="pipeline-container" class="ghost-border p-8 mb-16 reveal-on-scroll bg-background relative overflow-x-auto">
+          <h3 class="font-label-caps text-primary mb-8 tracking-widest">ARCHITECTURE PIPELINE</h3>
+          <div class="flex items-center gap-2 md:gap-4 font-label-caps text-[10px] md:text-xs text-on-surface-variant min-w-max">
+            <span class="ghost-border px-3 md:px-4 py-2 pipeline-step">AUDIO</span>
+            <span class="material-symbols-outlined text-primary-container text-sm pipeline-arrow">arrow_forward</span>
+            <span class="ghost-border px-3 md:px-4 py-2 pipeline-step">VAD</span>
+            <span class="material-symbols-outlined text-primary-container text-sm pipeline-arrow">arrow_forward</span>
+            <span class="ghost-border px-3 md:px-4 py-2 pipeline-step">SEGMENTATION</span>
+            <span class="material-symbols-outlined text-primary-container text-sm pipeline-arrow">arrow_forward</span>
+            <span class="ghost-border px-3 md:px-4 py-2 pipeline-step">SPEAKER DIARIZATION</span>
+            <span class="material-symbols-outlined text-primary-container text-sm pipeline-arrow">arrow_forward</span>
+            <span class="ghost-border px-3 md:px-4 py-2 pipeline-step">VOICE ID</span>
+            <span class="material-symbols-outlined text-primary-container text-sm pipeline-arrow">arrow_forward</span>
+            <span class="ghost-border px-3 md:px-4 py-2 pipeline-step">LANGUAGE DETECTION</span>
+            <span class="material-symbols-outlined text-primary-container text-sm pipeline-arrow">arrow_forward</span>
+            <span class="ghost-border px-3 md:px-4 py-2 pipeline-step">WHISPER ASR</span>
+            <span class="material-symbols-outlined text-primary-container text-sm pipeline-arrow">arrow_forward</span>
+            <span class="ghost-border px-3 md:px-4 py-2 pipeline-step">HALLUCINATION GUARDS</span>
+            <span class="material-symbols-outlined text-primary-container text-sm pipeline-arrow">arrow_forward</span>
+            <span class="ghost-border px-3 md:px-4 py-2 pipeline-step">FINAL TRANSCRIPT</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
+          <div class="reveal-on-scroll">
+            <h3 class="font-headline-lg text-3xl mb-6 text-primary">The Problem</h3>
+            <p class="font-body-lg text-on-surface-variant">Audio intelligence systems often struggle in noisy environments with multiple speakers interleaving rapidly. Standard transcription fails to attribute text to the right speaker, and multi-lingual conversations break monolithic models.</p>
+          </div>
+          
+          <div class="grid gap-6 reveal-on-scroll">
+            <div class="ghost-border p-6 flex items-start gap-4 project-card">
+              <span class="material-symbols-outlined text-primary-container text-3xl text-primary">record_voice_over</span>
+              <div>
+                <h4 class="font-headline-lg text-xl mb-2">Speaker ID</h4>
+                <p class="text-sm text-on-surface-variant">Custom embeddings to track individuals across sessions.</p>
+              </div>
+            </div>
+            
+            <div class="ghost-border p-6 flex items-start gap-4 project-card">
+              <span class="material-symbols-outlined text-primary-container text-3xl text-primary">translate</span>
+              <div>
+                <h4 class="font-headline-lg text-xl mb-2">Multilingual ASR</h4>
+                <p class="text-sm text-on-surface-variant">Seamless language switching mid-sentence without context loss.</p>
+              </div>
+            </div>
+
+            <div class="ghost-border p-6 flex items-start gap-4 project-card">
+              <span class="material-symbols-outlined text-primary-container text-3xl text-primary">verified_user</span>
+              <div>
+                <h4 class="font-headline-lg text-xl mb-2">Reliability</h4>
+                <p class="text-sm text-on-surface-variant">Automated hallucination detection and fallback mechanisms.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal-on-scroll text-center md:text-left">
+          <a class="inline-block btn-sweep-primary px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest magnetic-btn" href="#work">
+            VIEW CASE STUDY <span class="material-symbols-outlined text-sm align-middle ml-1">north_east</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. OTHER PROJECTS -->
+    <section class="py-32 px-margin-mobile md:px-margin-desktop border-t border-outline-variant/30">
+      <div class="max-w-container-max mx-auto">
+        <h2 class="font-headline-lg text-4xl mb-16 reveal-on-scroll">OTHER PROJECTS</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          <div class="ghost-border p-8 reveal-on-scroll flex flex-col justify-between project-card group relative">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="font-headline-lg text-2xl text-primary">Cognitive Guardian</h3>
+                <span class="material-symbols-outlined text-on-surface-variant transition-transform duration-300 project-arrow">arrow_forward</span>
+              </div>
+              <p class="text-on-surface-variant font-body-lg mb-8">A privacy-first on-device AI safety layer that detects rage-bait and toxic content in real-time, introducing contextual interventions before user reaction.</p>
+            </div>
+            
+            <div class="flex flex-wrap gap-2">
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">React Native</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">On-Device ML</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">Privacy-First</span>
+            </div>
+
+            <div class="absolute inset-0 bg-surface/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="font-label-caps text-primary tracking-widest border border-primary px-4 py-2">VIEW PROJECT</span>
+            </div>
+          </div>
+
+          <div class="ghost-border p-8 reveal-on-scroll flex flex-col justify-between project-card group relative">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="font-headline-lg text-2xl text-primary">Document Intelligence (DMS)</h3>
+                <span class="material-symbols-outlined text-on-surface-variant transition-transform duration-300 project-arrow">arrow_forward</span>
+              </div>
+              <p class="text-on-surface-variant font-body-lg mb-8">Multi-tenant document management system featuring automated OCR entity extraction, confidence calibration, tenant isolation, and audit-ready processing.</p>
+            </div>
+            
+            <div class="flex flex-wrap gap-2">
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">Python</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">FastAPI</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">Docker</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">PostgreSQL</span>
+            </div>
+
+            <div class="absolute inset-0 bg-surface/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="font-label-caps text-primary tracking-widest border border-primary px-4 py-2">VIEW PROJECT</span>
+            </div>
+          </div>
+
+          <div class="ghost-border p-8 reveal-on-scroll flex flex-col justify-between project-card group relative">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="font-headline-lg text-2xl text-primary">MIDC AI Assistant</h3>
+                <span class="material-symbols-outlined text-on-surface-variant transition-transform duration-300 project-arrow">arrow_forward</span>
+              </div>
+              <p class="text-on-surface-variant font-body-lg mb-8">Intelligent industrial assistant for MIDC providing automated policy retrieval, multilingual voice interaction (gTTS), and structured document Q&A.</p>
+            </div>
+            
+            <div class="flex flex-wrap gap-2">
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">Flask</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">OpenAI</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">PyMongo</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">gTTS</span>
+            </div>
+
+            <div class="absolute inset-0 bg-surface/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="font-label-caps text-primary tracking-widest border border-primary px-4 py-2">VIEW PROJECT</span>
+            </div>
+          </div>
+
+          <div class="ghost-border p-8 reveal-on-scroll flex flex-col justify-between project-card group relative">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="font-headline-lg text-2xl text-primary">Smart Society AI</h3>
+                <span class="material-symbols-outlined text-on-surface-variant transition-transform duration-300 project-arrow">arrow_forward</span>
+              </div>
+              <p class="text-on-surface-variant font-body-lg mb-8">Housing society management system combining vision OCR fallback (OpenCV), hybrid vector embeddings (PGVector), and Gemini Flash cleanup for automated resident Q&A.</p>
+            </div>
+            
+            <div class="flex flex-wrap gap-2">
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">PGVector</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">LangChain</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">Gemini Flash</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">OpenCV</span>
+            </div>
+
+            <div class="absolute inset-0 bg-surface/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="font-label-caps text-primary tracking-widest border border-primary px-4 py-2">VIEW PROJECT</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. EXPERIENCE -->
+    <section class="py-32 px-margin-mobile md:px-margin-desktop bg-surface-container-low border-t border-outline-variant/30" id="experience">
+      <div class="max-w-container-max mx-auto max-w-4xl">
+        <h2 class="font-headline-lg text-4xl mb-16 text-center reveal-on-scroll">EXPERIENCE</h2>
+        
+        <div id="experience-timeline" class="relative ghost-border-l ml-4 md:ml-8 space-y-8">
+          <!-- Animated connecting vertical line -->
+          <div class="timeline-progress-line absolute left-[-1px] top-0 bottom-0 w-[2px] bg-primary origin-top" style="transform: scaleY(0);"></div>
+
+          <div class="relative pl-8 md:pl-16 reveal-on-scroll exp-item">
+            <span class="timeline-dot absolute -left-[5px] top-6 w-2.5 h-2.5 rounded-full bg-surface-variant ring-4 ring-background"></span>
+            <div class="cursor-pointer group py-4" onclick="this.parentElement.classList.toggle('active')">
+              <div class="flex justify-between items-center mb-2">
+                <div>
+                  <span class="font-label-caps text-primary-container block mb-1 text-primary font-bold">2023 - PRESENT</span>
+                  <h3 class="font-headline-lg text-2xl group-hover:text-primary transition-colors">AI Engineer — Stark Digital</h3>
+                </div>
+                <span class="material-symbols-outlined text-on-surface-variant exp-icon transition-transform duration-300">expand_more</span>
+              </div>
+              <p class="font-label-caps text-on-surface-variant mb-2">LEAD AI ARCHITECT</p>
+              <p class="font-body-sm text-on-surface-variant">Spearheading the transition to agentic workflows. Architected a multi-agent financial compliance system reducing manual review time by <span class="animate-counter font-bold text-primary" data-target="70" data-suffix="%">70%</span>.</p>
+            </div>
+            
+            <div class="exp-content mt-4 border-t border-outline-variant/30 pt-4">
+              <h4 class="font-label-caps text-primary mb-3">KEY AREAS:</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="ghost-border px-3 py-1 text-xs font-label-caps text-on-surface-variant tag-pill">Nuance</span>
+                <span class="ghost-border px-3 py-1 text-xs font-label-caps text-on-surface-variant tag-pill">Speaker diarization / Voice ID</span>
+                <span class="ghost-border px-3 py-1 text-xs font-label-caps text-on-surface-variant tag-pill">Whisper</span>
+                <span class="ghost-border px-3 py-1 text-xs font-label-caps text-on-surface-variant tag-pill">Hallucination guards</span>
+                <span class="ghost-border px-3 py-1 text-xs font-label-caps text-on-surface-variant tag-pill">Language detection</span>
+                <span class="ghost-border px-3 py-1 text-xs font-label-caps text-on-surface-variant tag-pill">Document intelligence</span>
+                <span class="ghost-border px-3 py-1 text-xs font-label-caps text-on-surface-variant tag-pill">On-device AI</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative pl-8 md:pl-16 reveal-on-scroll exp-item">
+            <span class="timeline-dot absolute -left-[5px] top-6 w-2.5 h-2.5 rounded-full bg-surface-variant ring-4 ring-background"></span>
+            <div class="cursor-pointer group py-4" onclick="this.parentElement.classList.toggle('active')">
+              <div class="flex justify-between items-center mb-2">
+                <div>
+                  <span class="font-label-caps text-on-surface-variant block mb-1">2021 - 2023</span>
+                  <h3 class="font-headline-lg text-2xl group-hover:text-primary transition-colors">Flying Toads</h3>
+                </div>
+                <span class="material-symbols-outlined text-on-surface-variant exp-icon transition-transform duration-300">expand_more</span>
+              </div>
+              <p class="font-label-caps text-on-surface-variant mb-2">MACHINE LEARNING ENGINEER</p>
+              <p class="font-body-sm text-on-surface-variant">Developed robust Speech-to-Text models for low-resource languages, deploying edge-optimized models to embedded devices.</p>
+            </div>
+            
+            <div class="exp-content mt-4 border-t border-outline-variant/30 pt-4">
+              <p class="text-sm text-on-surface-variant">Optimized inference pipelines for embedded hardware, significantly reducing latency and memory footprint.</p>
+            </div>
+          </div>
+
+          <div class="relative pl-8 md:pl-16 reveal-on-scroll exp-item">
+            <span class="timeline-dot absolute -left-[5px] top-6 w-2.5 h-2.5 rounded-full bg-surface-variant ring-4 ring-background"></span>
+            <div class="cursor-pointer group py-4" onclick="this.parentElement.classList.toggle('active')">
+              <div class="flex justify-between items-center mb-2">
+                <div>
+                  <span class="font-label-caps text-on-surface-variant block mb-1">2019 - 2021</span>
+                  <h3 class="font-headline-lg text-2xl group-hover:text-primary transition-colors">Eduna</h3>
+                </div>
+                <span class="material-symbols-outlined text-on-surface-variant exp-icon transition-transform duration-300">expand_more</span>
+              </div>
+              <p class="font-label-caps text-on-surface-variant mb-2">DATA SCIENTIST</p>
+              <p class="font-body-sm text-on-surface-variant">Built personalized learning recommendation engines using collaborative filtering and deep learning techniques.</p>
+            </div>
+            
+            <div class="exp-content mt-4 border-t border-outline-variant/30 pt-4">
+              <p class="text-sm text-on-surface-variant">Implemented A/B testing frameworks to evaluate the effectiveness of recommendation algorithms on user engagement.</p>
+            </div>
+          </div>
+
+          <div class="relative pl-8 md:pl-16 reveal-on-scroll exp-item">
+            <span class="timeline-dot absolute -left-[5px] top-6 w-2.5 h-2.5 rounded-full bg-surface-variant ring-4 ring-background"></span>
+            <div class="cursor-pointer group py-4" onclick="this.parentElement.classList.toggle('active')">
+              <div class="flex justify-between items-center mb-2">
+                <div>
+                  <span class="font-label-caps text-on-surface-variant block mb-1">2018 - 2019</span>
+                  <h3 class="font-headline-lg text-2xl group-hover:text-primary transition-colors">Codec Technologies</h3>
+                </div>
+                <span class="material-symbols-outlined text-on-surface-variant exp-icon transition-transform duration-300">expand_more</span>
+              </div>
+              <p class="font-label-caps text-on-surface-variant mb-2">SOFTWARE ENGINEER</p>
+              <p class="font-body-sm text-on-surface-variant">Backend infrastructure development and database optimization for scalable web applications.</p>
+            </div>
+            
+            <div class="exp-content mt-4 border-t border-outline-variant/30 pt-4">
+              <p class="text-sm text-on-surface-variant">Designed and developed RESTful APIs, improved database query performance, and set up CI/CD pipelines.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. TECH STACK -->
+    <section class="py-32 px-margin-mobile md:px-margin-desktop border-t border-outline-variant/30">
+      <div class="max-w-container-max mx-auto">
+        <h2 class="font-headline-lg text-4xl mb-16 reveal-on-scroll">TECH STACK</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          
+          <div class="ghost-border p-6 reveal-on-scroll hover:bg-surface-container transition-colors duration-300">
+            <h4 class="font-label-caps text-primary mb-4">LANGUAGES</h4>
+            <ul class="space-y-2 text-sm text-on-surface-variant">
+              <li class="relative tooltip cursor-help hover:text-primary transition-colors">Python <span class="tooltip-text">Primary language for ML and backend dev.</span></li>
+              <li class="relative tooltip cursor-help hover:text-primary transition-colors">C++ <span class="tooltip-text">Used for performance-critical components.</span></li>
+              <li class="relative tooltip cursor-help hover:text-primary transition-colors">TypeScript <span class="tooltip-text">For frontend integration and typed logic.</span></li>
+              <li class="relative tooltip cursor-help hover:text-primary transition-colors">Go <span class="tooltip-text">Used for high-concurrency microservices.</span></li>
+            </ul>
+          </div>
+
+          <div class="ghost-border p-6 reveal-on-scroll hover:bg-surface-container transition-colors duration-300">
+            <h4 class="font-label-caps text-primary mb-4">AI / ML</h4>
+            <ul class="space-y-2 text-sm text-on-surface-variant">
+              <li class="relative tooltip cursor-help hover:text-primary transition-colors">PyTorch <span class="tooltip-text">Deep learning framework of choice.</span></li>
+              <li class="relative tooltip cursor-help hover:text-primary transition-colors">TensorFlow <span class="tooltip-text">For edge deployment and legacy systems.</span></li>
+              <li class="relative tooltip cursor-help hover:text-primary transition-colors">Scikit-Learn <span class="tooltip-text">Traditional ML algorithms.</span></li>
+              <li class="relative tooltip cursor-help hover:text-primary transition-colors">HuggingFace <span class="tooltip-text">Transformer models and pipelines.</span></li>
+            </ul>
+          </div>
+
+          <div class="ghost-border p-6 reveal-on-scroll hover:bg-surface-container transition-colors duration-300">
+            <h4 class="font-label-caps text-primary mb-4">LLMs & AGENTS</h4>
+            <ul class="space-y-2 text-sm text-on-surface-variant">
+              <li class="relative tooltip cursor-help hover:text-primary transition-colors">OpenAI / Anthropic <span class="tooltip-text">Foundational LLM integration.</span></li>
+              <li class="relative tooltip cursor-help hover:text-primary transition-colors">LangChain <span class="tooltip-text">Framework for developing LLM apps.</span></li>
+              <li class="relative tooltip cursor-help hover:text-primary transition-colors">LlamaIndex <span class="tooltip-text">Data framework for LLM apps (RAG).</span></li>
+              <li class="relative tooltip cursor-help hover:text-primary transition-colors">Whisper <span class="tooltip-text">Used in: Nuance | Purpose: multilingual speech recognition and transcription.</span></li>
+            </ul>
+          </div>
+
+          <div class="ghost-border p-6 reveal-on-scroll hover:bg-surface-container transition-colors duration-300">
+            <h4 class="font-label-caps text-primary mb-4">INFRASTRUCTURE</h4>
+            <ul class="space-y-2 text-sm text-on-surface-variant">
+              <li class="relative tooltip cursor-help hover:text-primary transition-colors">Docker / K8s <span class="tooltip-text">Containerization and orchestration.</span></li>
+              <li class="relative tooltip cursor-help hover:text-primary transition-colors">AWS / GCP <span class="tooltip-text">Cloud infrastructure deployment.</span></li>
+              <li class="relative tooltip cursor-help hover:text-primary transition-colors">Pinecone / Weaviate <span class="tooltip-text">Vector databases for RAG.</span></li>
+              <li class="relative tooltip cursor-help hover:text-primary transition-colors">Redis / PostgreSQL <span class="tooltip-text">Caching and relational data storage.</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. HOW I ENGINEER AI -->
+    <section class="py-32 px-margin-mobile md:px-margin-desktop bg-surface-container-low border-t border-outline-variant/30">
+      <div class="max-w-container-max mx-auto">
+        <h2 class="font-headline-lg text-4xl mb-16 text-center reveal-on-scroll">HOW I ENGINEER AI</h2>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+          
+          <div class="ghost-border p-6 text-center reveal-on-scroll project-card">
+            <span class="font-display-xl text-6xl text-primary-container opacity-50 block mb-4 text-primary font-bold">01</span>
+            <h4 class="font-headline-lg text-xl mb-2">Discover</h4>
+            <p class="text-xs text-on-surface-variant">Identify data constraints and define exact metrics.</p>
+          </div>
+
+          <div class="ghost-border p-6 text-center reveal-on-scroll project-card">
+            <span class="font-display-xl text-6xl text-primary-container opacity-50 block mb-4 text-primary font-bold">02</span>
+            <h4 class="font-headline-lg text-xl mb-2">Design</h4>
+            <p class="text-xs text-on-surface-variant">Architect pipelines for scale and low latency.</p>
+          </div>
+
+          <div class="ghost-border p-6 text-center reveal-on-scroll project-card">
+            <span class="font-display-xl text-6xl text-primary-container opacity-50 block mb-4 text-primary font-bold">03</span>
+            <h4 class="font-headline-lg text-xl mb-2">Build</h4>
+            <p class="text-xs text-on-surface-variant">Develop models and integrate agentic logic.</p>
+          </div>
+
+          <div class="ghost-border p-6 text-center reveal-on-scroll project-card">
+            <span class="font-display-xl text-6xl text-primary-container opacity-50 block mb-4 text-primary font-bold">04</span>
+            <h4 class="font-headline-lg text-xl mb-2">Evaluate</h4>
+            <p class="text-xs text-on-surface-variant">Rigorous red-teaming and hallucination checks.</p>
+          </div>
+
+          <div class="ghost-border p-6 text-center reveal-on-scroll project-card">
+            <span class="font-display-xl text-6xl text-primary-container opacity-50 block mb-4 text-primary font-bold">05</span>
+            <h4 class="font-headline-lg text-xl mb-2">Deploy</h4>
+            <p class="text-xs text-on-surface-variant">Continuous monitoring and edge optimization.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. IMPACT -->
+    <section class="py-32 px-margin-mobile md:px-margin-desktop border-t border-outline-variant/30">
+      <div class="max-w-container-max mx-auto text-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="reveal-on-scroll">
+            <span class="animate-counter font-display-xl text-[80px] md:text-[120px] text-primary block leading-none" data-target="4">04</span>
+            <p class="font-label-caps text-on-surface-variant tracking-widest mt-4">HALLUCINATION GUARDS</p>
+          </div>
+
+          <div class="reveal-on-scroll">
+            <span class="animate-counter font-display-xl text-[80px] md:text-[120px] text-primary block leading-none" data-target="3">03</span>
+            <p class="font-label-caps text-on-surface-variant tracking-widest mt-4">LANGUAGES MASTERED</p>
+          </div>
+
+          <div class="reveal-on-scroll">
+            <span class="animate-counter font-display-xl text-[80px] md:text-[120px] text-primary block leading-none" data-target="99" data-suffix="%">99%</span>
+            <p class="font-label-caps text-on-surface-variant tracking-widest mt-4">UPTIME ARCHITECTURE</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. EDUCATION -->
+    <section class="py-32 px-margin-mobile md:px-margin-desktop bg-surface-container-low border-t border-outline-variant/30">
+      <div class="max-w-container-max mx-auto">
+        <h2 class="font-headline-lg text-4xl mb-16 text-center reveal-on-scroll">EDUCATION</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          
+          <div class="ghost-border p-8 reveal-on-scroll project-card">
+            <span class="font-label-caps text-primary mb-2 block font-bold">2024 - 2026</span>
+            <h3 class="font-headline-lg text-2xl mb-2">B.Tech in Artificial Intelligence & Data Science</h3>
+            <p class="text-on-surface-variant font-body-sm">CSMSS College of Engineering</p>
+          </div>
+
+          <div class="ghost-border p-8 reveal-on-scroll project-card">
+            <span class="font-label-caps text-primary mb-2 block font-bold">2021 - 2023</span>
+            <h3 class="font-headline-lg text-2xl mb-2">Diploma in Computer Engineering — 79.78% (Distinction)</h3>
+            <p class="text-on-surface-variant font-body-sm">Marathwada Institute of Technology</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. FINAL CONTACT CTA -->
+    <section class="py-40 px-margin-mobile md:px-margin-desktop border-t border-outline-variant/30 relative overflow-hidden" id="contact">
+      <div class="absolute inset-0 z-0 opacity-5 pointer-events-none flex items-center justify-center overflow-hidden">
+        <span class="font-display-xl text-[20vw] whitespace-nowrap text-on-background leading-none font-bold select-none">CONNECT</span>
+      </div>
+      
+      <div class="relative z-10 max-w-container-max mx-auto text-center flex flex-col items-center">
+        <h2 class="font-display-xl-mobile md:font-display-xl text-5xl md:text-[80px] leading-tight mb-16 max-w-4xl reveal-on-scroll">LET'S BUILD SOMETHING INTELLIGENT</h2>
+        
+        <div class="flex flex-wrap justify-center gap-6 reveal-on-scroll">
+          <a class="btn-sweep-primary px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest magnetic-btn" href="mailto:laxmiraut@example.com">EMAIL ME</a>
+          <a class="ghost-border px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest magnetic-btn hover:bg-surface-variant text-on-surface" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+          <a class="ghost-border px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest magnetic-btn hover:bg-surface-variant text-on-surface" href="https://github.com" target="_blank" rel="noopener noreferrer">GITHUB</a>
+          <a class="ghost-border px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest magnetic-btn hover:bg-surface-variant text-primary" href="#" target="_blank" rel="noopener noreferrer">RESUME</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full py-20 border-t border-outline-variant/30 bg-background">
+    <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto gap-8">
+      <p class="font-label-caps text-label-caps text-on-surface-variant">© 2024 LAXMI RAUT. ENGINEERED WITH PRECISION.</p>
+      <div class="flex gap-8">
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-1" href="#">INSTAGRAM</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-1" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-1" href="https://github.com" target="_blank" rel="noopener noreferrer">GITHUB</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-1" href="#">TWITTER</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AI Assistant Drawer -->
+  <div class="fixed inset-y-0 right-0 z-[70] w-full max-w-sm bg-surface translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col ghost-border-l shadow-2xl" id="aiDrawer">
+    <div class="p-6 border-b border-outline-variant/30 flex justify-between items-center bg-surface-container-low">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        <span class="font-label-caps text-primary font-bold">LAXMI'S AI</span>
+      </div>
+      <button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors cursor-pointer" id="closeAiDrawer">close</button>
+    </div>
+
+    <div class="flex-1 p-6 overflow-y-auto space-y-4 flex flex-col" id="chatMessagesContainer">
+      <div class="bg-surface-container p-4 rounded-lg self-start max-w-[85%] text-sm ghost-border" id="aiGreetingMsg">
+        <!-- Typewriter greeting dynamically placed here -->
+      </div>
+      
+      <!-- Suggested Prompts -->
+      <div class="flex flex-col gap-2 mt-4" id="suggestedPromptsContainer">
+        <button class="suggested-prompt-btn text-left font-label-caps text-[10px] md:text-xs ghost-border px-3 py-2 text-on-surface-variant hover:text-primary hover:border-primary transition-colors tag-pill">WHAT DID LAXMI BUILD?</button>
+        <button class="suggested-prompt-btn text-left font-label-caps text-[10px] md:text-xs ghost-border px-3 py-2 text-on-surface-variant hover:text-primary hover:border-primary transition-colors tag-pill">EXPLAIN NUANCE</button>
+        <button class="suggested-prompt-btn text-left font-label-caps text-[10px] md:text-xs ghost-border px-3 py-2 text-on-surface-variant hover:text-primary hover:border-primary transition-colors tag-pill">WHAT ARE HER AI SKILLS?</button>
+        <button class="suggested-prompt-btn text-left font-label-caps text-[10px] md:text-xs ghost-border px-3 py-2 text-on-surface-variant hover:text-primary hover:border-primary transition-colors tag-pill">TELL ME ABOUT HER EXPERIENCE?</button>
+      </div>
+    </div>
+
+    <div class="p-6 border-t border-outline-variant/30 bg-surface-container-low">
+      <div class="relative">
+        <input id="chatInput" class="w-full bg-surface border border-outline-variant/50 rounded-full py-3 pl-4 pr-12 text-sm focus:outline-none focus:border-primary text-on-surface placeholder:text-on-surface-variant/50" placeholder="Ask about her skills..." type="text" />
+        <button id="sendChatBtn" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-primary hover:bg-primary-container rounded-full transition-colors cursor-pointer">
+          <span class="material-symbols-outlined text-sm">send</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Assistant FAB Button -->
+  <button class="fixed bottom-8 right-8 z-40 bg-primary-container text-on-primary-container rounded-full px-6 py-4 flex items-center gap-3 magnetic-btn shadow-2xl border border-outline-variant/30 group cursor-pointer" id="aiFabBtn">
+    <span class="material-symbols-outlined text-primary group-hover:rotate-12 transition-transform">auto_awesome</span>
+    <span class="font-label-caps text-label-caps font-bold">ASK LAXMI'S AI</span>
+  </button>
+
+</body>
+</html>
