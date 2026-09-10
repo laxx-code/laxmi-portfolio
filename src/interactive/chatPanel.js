@@ -21,6 +21,9 @@ export function initChatPanel() {
     if (shouldOpen) {
       aiDrawer.classList.remove('translate-x-full');
       aiDrawer.classList.add('translate-x-0');
+      if (aiFabBtn) {
+        aiFabBtn.classList.add('opacity-0', 'pointer-events-none', 'scale-90');
+      }
       
       if (!hasTypedGreeting) {
         startGreetingSequence();
@@ -29,6 +32,9 @@ export function initChatPanel() {
     } else {
       aiDrawer.classList.add('translate-x-full');
       aiDrawer.classList.remove('translate-x-0');
+      if (aiFabBtn) {
+        aiFabBtn.classList.remove('opacity-0', 'pointer-events-none', 'scale-90');
+      }
     }
   }
 
