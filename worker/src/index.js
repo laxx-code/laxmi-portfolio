@@ -80,7 +80,7 @@ export default {
       }
 
       // Call Cloudflare Workers AI model
-      const aiResponse = await env.AI.run('@cf/meta/llama-3.1-8b-instruct', {
+      const aiResponse = await env.AI.run('@cf/meta/llama-3.3-70b-instruct-fp8-fast', {
         messages: [
           { role: 'system', content: SYSTEM_PROMPT },
           { role: 'user', content: userMessage },
@@ -89,7 +89,7 @@ export default {
         temperature: 0.5,
       });
 
-      const reply = aiResponse.response || aiResponse.text || "Laxmi specializes in building scalable AI systems. Feel free to ask about her projects, experience, or tech stack!";
+      const reply = aiResponse.response || (aiResponse.choices && aiResponse.choices[0] && aiResponse.choices[0].message && aiResponse.choices[0].message.content) || aiResponse.text || "Laxmi specializes in building scalable AI systems. Feel free to ask about her projects, experience, or tech stack!";
 
       return new Response(JSON.stringify({ reply }), {
         status: 200,
