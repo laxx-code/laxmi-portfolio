@@ -8,6 +8,7 @@ import { initPipelineAnimation } from './animations/pipelineAnimation.js';
 import { initCounters } from './animations/counters.js';
 import { initTimelineAnimation } from './animations/timeline.js';
 import { initChatPanel } from './interactive/chatPanel.js';
+import { initCaseStudyInteractivity } from './interactive/caseStudy.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initTimelineAnimation();
   initChatPanel();
+  initCaseStudyInteractivity();
 
   // Refresh ScrollTrigger after assets load
   window.addEventListener('load', () => {
