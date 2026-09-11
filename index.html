@@ -652,25 +652,83 @@
             </div>
           </div>
 
-          <!-- Subtle Waveform & Speaker Timeline Visual Representation + Video Recording -->
+          <!-- Subtle Waveform & Speaker Timeline Visual Representation + Video Recording & Live Output -->
           <div class="ghost-border p-6 bg-surface-container-high/30 relative overflow-hidden space-y-6">
             <div class="flex items-center justify-between">
               <span class="font-label-caps text-xs text-primary tracking-widest uppercase flex items-center gap-2">
                 <span class="material-symbols-outlined text-sm text-primary animate-pulse">videocam</span>
-                SYSTEM DEMO RECORDING // LIVE PIPELINE IN ACTION
+                SYSTEM DEMO RECORDING & LIVE OUTPUT DASHBOARD
               </span>
               <div class="flex items-center gap-1.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-                <span class="font-mono text-[10px] text-emerald-400 font-bold uppercase">RECORDING ATTACHED</span>
+                <span class="font-mono text-[10px] text-emerald-400 font-bold uppercase">RECORDING & OUTPUT ATTACHED</span>
               </div>
             </div>
             
-            <!-- Video Player -->
-            <div class="ghost-border overflow-hidden bg-surface-container-lowest aspect-video relative group shadow-2xl">
-              <video controls class="w-full h-full object-cover" preload="metadata">
-                <source src="./assets/videos/nuance_demo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+              <!-- Video Player (Col 7) -->
+              <div class="lg:col-span-7 ghost-border overflow-hidden bg-surface-container-lowest aspect-video relative group shadow-2xl">
+                <video controls class="w-full h-full object-cover" preload="metadata">
+                  <source src="./assets/videos/nuance_demo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              <!-- Live Extracted Pipeline Output Panel (Col 5) -->
+              <div class="lg:col-span-5 ghost-border p-5 bg-background font-mono text-xs space-y-4 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between border-b border-outline-variant/20 pb-3 mb-3">
+                    <span class="font-label-caps text-[10px] text-primary tracking-widest uppercase flex items-center gap-1">
+                      <span class="material-symbols-outlined text-xs">subtitles</span> LIVE EXTRACTED TRANSCRIPT
+                    </span>
+                    <span class="text-[9px] px-1.5 py-0.5 bg-primary/20 text-primary border border-primary/40 font-bold">VALIDATED</span>
+                  </div>
+
+                  <!-- Real Output Dialogue Lines -->
+                  <div class="space-y-2.5 max-h-48 overflow-y-auto pr-1">
+                    <div class="p-2 bg-surface-container border-l-2 border-primary">
+                      <div class="flex justify-between text-[10px] text-primary font-bold">
+                        <span>Speaker 01 (English)</span>
+                        <span>00:02 - 00:08</span>
+                      </div>
+                      <p class="text-on-surface font-sans text-xs mt-1">"Let's move this to tomorrow."</p>
+                    </div>
+
+                    <div class="p-2 bg-surface-container border-l-2 border-emerald-400">
+                      <div class="flex justify-between text-[10px] text-emerald-400 font-bold">
+                        <span>Speaker 02 (Hindi)</span>
+                        <span>00:15 - 00:22</span>
+                      </div>
+                      <p class="text-on-surface font-sans text-xs mt-1">"ठीक है, मैं इसे संभाल लूँगा।" <span class="text-on-surface-variant text-[10px] block opacity-75">(Okay, I'll handle it.)</span></p>
+                    </div>
+
+                    <div class="p-2 bg-surface-container border-l-2 border-primary">
+                      <div class="flex justify-between text-[10px] text-primary font-bold">
+                        <span>Speaker 01 (English)</span>
+                        <span>00:29 - 00:34</span>
+                      </div>
+                      <p class="text-on-surface font-sans text-xs mt-1">"I'll send the document."</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Generated Downstream Intelligence Box -->
+                <div class="pt-3 border-t border-outline-variant/20 space-y-2">
+                  <span class="font-label-caps text-[10px] text-amber-400 tracking-widest block uppercase flex items-center gap-1">
+                    <span class="material-symbols-outlined text-xs">task_alt</span> EXTRACTED ACTION ITEMS
+                  </span>
+                  <div class="p-2 bg-surface-container-high/60 ghost-border font-sans text-[11px] text-on-surface space-y-1">
+                    <div class="flex items-start gap-1.5">
+                      <span class="text-amber-400 font-bold">•</span>
+                      <span><strong>Speaker 02:</strong> Handle meeting follow-up tasks.</span>
+                    </div>
+                    <div class="flex items-start gap-1.5">
+                      <span class="text-amber-400 font-bold">•</span>
+                      <span><strong>Speaker 01:</strong> Send project document before tomorrow's sync.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- Signal Flow & Waveform -->
@@ -679,7 +737,7 @@
                 <span class="font-label-caps text-[10px] text-on-surface-variant tracking-widest uppercase">SPEECH PIPELINE SIGNAL FLOW</span>
                 <span class="font-mono text-[10px] text-on-surface-variant">16kHz PCM Stream</span>
               </div>
-              <div class="h-16 w-full flex items-center justify-between gap-1 px-2 border-y border-outline-variant/20 bg-background/50 my-2">
+              <div class="h-14 w-full flex items-center justify-between gap-1 px-2 border-y border-outline-variant/20 bg-background/50 my-2">
                 <div class="h-full flex items-center gap-1 w-full justify-around">
                   <span class="w-1 bg-primary/40 h-4 animate-pulse"></span>
                   <span class="w-1 bg-primary h-10 animate-pulse"></span>
