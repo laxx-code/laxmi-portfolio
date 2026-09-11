@@ -652,39 +652,52 @@
             </div>
           </div>
 
-          <!-- Subtle Waveform & Speaker Timeline Visual Representation -->
-          <div class="ghost-border p-6 bg-surface-container-high/30 relative overflow-hidden">
-            <div class="flex items-center justify-between mb-4">
-              <span class="font-label-caps text-[10px] text-primary tracking-widest uppercase">SPEECH PIPELINE SIGNAL FLOW</span>
+          <!-- Subtle Waveform & Speaker Timeline Visual Representation + Video Recording -->
+          <div class="ghost-border p-6 bg-surface-container-high/30 relative overflow-hidden space-y-6">
+            <div class="flex items-center justify-between">
+              <span class="font-label-caps text-xs text-primary tracking-widest uppercase flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-primary animate-pulse">videocam</span>
+                SYSTEM DEMO RECORDING // LIVE PIPELINE IN ACTION
+              </span>
               <div class="flex items-center gap-1.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-                <span class="font-mono text-[10px] text-on-surface-variant">16kHz PCM Stream</span>
+                <span class="font-mono text-[10px] text-emerald-400 font-bold uppercase">RECORDING ATTACHED</span>
               </div>
             </div>
             
-            <!-- Animated SVG Waveform Visual -->
-            <div class="h-20 w-full flex items-center justify-between gap-1 px-2 border-y border-outline-variant/20 bg-background/50 my-4">
-              <div class="h-full flex items-center gap-1 w-full justify-around">
-                <span class="w-1 bg-primary/40 h-4 animate-pulse"></span>
-                <span class="w-1 bg-primary h-12 animate-pulse"></span>
-                <span class="w-1 bg-primary h-8 animate-pulse"></span>
-                <span class="w-1 bg-primary/30 h-2"></span>
-                <span class="w-1 bg-primary/30 h-2"></span>
-                <span class="w-1 bg-emerald-400 h-16 animate-pulse"></span>
-                <span class="w-1 bg-emerald-400 h-10 animate-pulse"></span>
-                <span class="w-1 bg-emerald-400 h-14 animate-pulse"></span>
-                <span class="w-1 bg-primary/30 h-2"></span>
-                <span class="w-1 bg-amber-400 h-12 animate-pulse"></span>
-                <span class="w-1 bg-amber-400 h-16 animate-pulse"></span>
-                <span class="w-1 bg-primary/30 h-2"></span>
-                <span class="w-1 bg-primary h-10 animate-pulse"></span>
-                <span class="w-1 bg-primary h-14 animate-pulse"></span>
-                <span class="w-1 bg-primary/30 h-2"></span>
+            <!-- Video Player -->
+            <div class="ghost-border overflow-hidden bg-surface-container-lowest aspect-video relative group shadow-2xl">
+              <video controls class="w-full h-full object-cover" preload="metadata">
+                <source src="./assets/videos/nuance_demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <!-- Signal Flow & Waveform -->
+            <div class="pt-2">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-label-caps text-[10px] text-on-surface-variant tracking-widest uppercase">SPEECH PIPELINE SIGNAL FLOW</span>
+                <span class="font-mono text-[10px] text-on-surface-variant">16kHz PCM Stream</span>
+              </div>
+              <div class="h-16 w-full flex items-center justify-between gap-1 px-2 border-y border-outline-variant/20 bg-background/50 my-2">
+                <div class="h-full flex items-center gap-1 w-full justify-around">
+                  <span class="w-1 bg-primary/40 h-4 animate-pulse"></span>
+                  <span class="w-1 bg-primary h-10 animate-pulse"></span>
+                  <span class="w-1 bg-primary h-6 animate-pulse"></span>
+                  <span class="w-1 bg-primary/30 h-2"></span>
+                  <span class="w-1 bg-emerald-400 h-14 animate-pulse"></span>
+                  <span class="w-1 bg-emerald-400 h-8 animate-pulse"></span>
+                  <span class="w-1 bg-emerald-400 h-12 animate-pulse"></span>
+                  <span class="w-1 bg-primary/30 h-2"></span>
+                  <span class="w-1 bg-amber-400 h-10 animate-pulse"></span>
+                  <span class="w-1 bg-amber-400 h-14 animate-pulse"></span>
+                  <span class="w-1 bg-primary/30 h-2"></span>
+                </div>
               </div>
             </div>
 
             <!-- Speaker Lanes Visual -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 font-mono text-[11px] pt-2">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 font-mono text-[11px] pt-1">
               <div class="p-3 bg-surface-container ghost-border flex items-center justify-between">
                 <span class="text-primary">Speaker 01 (English)</span>
                 <span class="text-[10px] text-on-surface-variant">ECAPA Vector #A71</span>
