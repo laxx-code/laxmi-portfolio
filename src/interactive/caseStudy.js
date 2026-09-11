@@ -1,55 +1,6 @@
-// Interactive JS for NUANCE Speech AI Case Study
+// Interactive JS for NUANCE Speech AI Case Study Page
 
 export function initCaseStudyInteractivity() {
-  const caseStudySection = document.getElementById('nuance-case-study');
-  const viewBtns = document.querySelectorAll('a[href="#nuance-case-study"]');
-
-  function openCaseStudy(e) {
-    if (e) e.preventDefault();
-    if (!caseStudySection) return;
-    caseStudySection.classList.remove('hidden');
-    caseStudySection.scrollIntoView({ behavior: 'smooth' });
-    history.pushState(null, null, '#nuance-case-study');
-  }
-
-  function closeCaseStudy(e) {
-    if (caseStudySection && !caseStudySection.classList.contains('hidden')) {
-      if (e) e.preventDefault();
-      const workSection = document.getElementById('work');
-      if (workSection) {
-        workSection.scrollIntoView({ behavior: 'smooth' });
-      }
-      setTimeout(() => {
-        caseStudySection.classList.add('hidden');
-      }, 400);
-      history.pushState(null, null, '#work');
-    }
-  }
-
-  viewBtns.forEach(btn => btn.addEventListener('click', openCaseStudy));
-
-  // Back to projects buttons inside case study
-  if (caseStudySection) {
-    const caseStudyBackBtns = caseStudySection.querySelectorAll('a[href="#work"]');
-    caseStudyBackBtns.forEach(btn => btn.addEventListener('click', closeCaseStudy));
-  }
-
-  // Check URL hash on initial load
-  if (window.location.hash === '#nuance-case-study') {
-    if (caseStudySection) caseStudySection.classList.remove('hidden');
-  } else if (caseStudySection) {
-    caseStudySection.classList.add('hidden');
-  }
-
-  // Handle browser back/forward buttons
-  window.addEventListener('hashchange', () => {
-    if (window.location.hash === '#nuance-case-study') {
-      if (caseStudySection) caseStudySection.classList.remove('hidden');
-    } else if (caseStudySection) {
-      caseStudySection.classList.add('hidden');
-    }
-  });
-
   // 1. Architecture Diagram Node Expansion & Highlight
   const archNodes = document.querySelectorAll('.case-study-arch-node');
   const archDetailTitle = document.getElementById('archDetailTitle');
