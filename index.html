@@ -18,6 +18,46 @@
   <!-- Waveform Scroll Progress Bar -->
   <div id="waveform-container" title="Scroll progress waveform"></div>
 
+  <!-- AI Assistant FAB Button (Left Anchored & Fixed to Viewport) -->
+  <button class="fixed bottom-6 left-6 md:bottom-8 md:left-8 z-50 bg-primary-container text-on-primary-container rounded-full px-5 py-3.5 flex items-center gap-3 magnetic-btn shadow-2xl border border-outline-variant/30 group cursor-pointer whitespace-nowrap transition-all duration-300" id="aiFabBtn">
+    <span class="material-symbols-outlined text-primary group-hover:rotate-12 transition-transform">auto_awesome</span>
+    <span class="font-label-caps text-label-caps font-bold">ASK LAXMI'S AI</span>
+  </button>
+
+  <!-- AI Assistant Drawer (Left Anchored & Fixed to Viewport) -->
+  <div class="fixed inset-y-0 left-0 z-[70] w-full max-w-sm bg-surface -translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col ghost-border-r shadow-2xl" id="aiDrawer">
+    <div class="p-6 border-b border-outline-variant/30 flex justify-between items-center bg-surface-container-low">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        <span class="font-label-caps text-primary font-bold">LAXMI'S AI</span>
+      </div>
+      <button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors cursor-pointer" id="closeAiDrawer">close</button>
+    </div>
+
+    <div class="flex-1 p-6 overflow-y-auto space-y-4 flex flex-col" id="chatMessagesContainer">
+      <div class="bg-surface-container p-4 rounded-lg self-start max-w-[85%] text-sm ghost-border" id="aiGreetingMsg">
+        <!-- Typewriter greeting dynamically placed here -->
+      </div>
+      
+      <!-- Suggested Prompts -->
+      <div class="flex flex-col gap-2 mt-4" id="suggestedPromptsContainer">
+        <button class="suggested-prompt-btn text-left font-label-caps text-[10px] md:text-xs ghost-border px-3 py-2 text-on-surface-variant hover:text-primary hover:border-primary transition-colors tag-pill">WHAT DID LAXMI BUILD?</button>
+        <button class="suggested-prompt-btn text-left font-label-caps text-[10px] md:text-xs ghost-border px-3 py-2 text-on-surface-variant hover:text-primary hover:border-primary transition-colors tag-pill">EXPLAIN NUANCE</button>
+        <button class="suggested-prompt-btn text-left font-label-caps text-[10px] md:text-xs ghost-border px-3 py-2 text-on-surface-variant hover:text-primary hover:border-primary transition-colors tag-pill">WHAT ARE HER AI SKILLS?</button>
+        <button class="suggested-prompt-btn text-left font-label-caps text-[10px] md:text-xs ghost-border px-3 py-2 text-on-surface-variant hover:text-primary hover:border-primary transition-colors tag-pill">TELL ME ABOUT HER EXPERIENCE?</button>
+      </div>
+    </div>
+
+    <div class="p-6 border-t border-outline-variant/30 bg-surface-container-low">
+      <div class="relative">
+        <input id="chatInput" class="w-full bg-surface border border-outline-variant/50 rounded-full py-3 pl-4 pr-12 text-sm focus:outline-none focus:border-primary text-on-surface placeholder:text-on-surface-variant/50" placeholder="Ask about her skills..." type="text" />
+        <button id="sendChatBtn" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-primary hover:bg-primary-container rounded-full transition-colors cursor-pointer">
+          <span class="material-symbols-outlined text-sm">send</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Page Content Container (Clips horizontal overflow without breaking position: fixed) -->
   <div class="overflow-x-hidden w-full relative">
 
@@ -267,17 +307,80 @@
           <div class="ghost-border p-8 reveal-on-scroll flex flex-col justify-between project-card group relative">
             <div>
               <div class="flex justify-between items-start mb-4">
-                <h3 class="font-headline-lg text-2xl text-primary">AI Visitor Management System</h3>
+                <h3 class="font-headline-lg text-2xl text-primary">Cognitive Guardian (Undoom)</h3>
                 <span class="material-symbols-outlined text-on-surface-variant transition-transform duration-300 project-arrow">arrow_forward</span>
               </div>
-              <p class="text-on-surface-variant font-body-lg mb-8">Owned AI layer end-to-end: OCR & handwritten-letter extraction with confidence scoring, sentiment analysis, priority scoring, and a swappable multi-provider fallback interface (OpenAI, Gemini, Ollama, OpenRouter).</p>
+              <p class="text-on-surface-variant font-body-lg mb-8">On-device content-safety AI detecting rage-bait and toxic content in social feeds in real time across Android (Gemini Nano) and iOS (Apple Foundation Models), introducing contextual interventions before user reaction.</p>
             </div>
             
             <div class="flex flex-wrap gap-2">
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">Gemini Nano</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">Apple Foundation</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">On-Device ML</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">React Native</span>
+            </div>
+
+            <div class="absolute inset-0 bg-surface/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="font-label-caps text-primary tracking-widest border border-primary px-4 py-2">VIEW PROJECT</span>
+            </div>
+          </div>
+
+          <div class="ghost-border p-8 reveal-on-scroll flex flex-col justify-between project-card group relative">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="font-headline-lg text-2xl text-primary">Document Intelligence System (DMS)</h3>
+                <span class="material-symbols-outlined text-on-surface-variant transition-transform duration-300 project-arrow">arrow_forward</span>
+              </div>
+              <p class="text-on-surface-variant font-body-lg mb-8">Multi-tenant document management platform featuring automated OCR entity extraction, confidence calibration, tenant isolation, and audit-ready document processing pipelines.</p>
+            </div>
+            
+            <div class="flex flex-wrap gap-2">
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">Python</span>
               <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">FastAPI</span>
-              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">OCR</span>
-              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">LLM APIs</span>
-              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">Sentiment Analysis</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">Docker</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">PostgreSQL</span>
+            </div>
+
+            <div class="absolute inset-0 bg-surface/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="font-label-caps text-primary tracking-widest border border-primary px-4 py-2">VIEW PROJECT</span>
+            </div>
+          </div>
+
+          <div class="ghost-border p-8 reveal-on-scroll flex flex-col justify-between project-card group relative">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="font-headline-lg text-2xl text-primary">MIDC AI Assistant</h3>
+                <span class="material-symbols-outlined text-on-surface-variant transition-transform duration-300 project-arrow">arrow_forward</span>
+              </div>
+              <p class="text-on-surface-variant font-body-lg mb-8">Intelligent industrial assistant for Maharashtra Industrial Development Corporation (MIDC) providing automated policy retrieval, multilingual voice interaction (gTTS), and structured document Q&A.</p>
+            </div>
+            
+            <div class="flex flex-wrap gap-2">
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">Flask</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">OpenAI</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">PyMongo</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">gTTS</span>
+            </div>
+
+            <div class="absolute inset-0 bg-surface/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+              <span class="font-label-caps text-primary tracking-widest border border-primary px-4 py-2">VIEW PROJECT</span>
+            </div>
+          </div>
+
+          <div class="ghost-border p-8 reveal-on-scroll flex flex-col justify-between project-card group relative">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="font-headline-lg text-2xl text-primary">Smart Society AI</h3>
+                <span class="material-symbols-outlined text-on-surface-variant transition-transform duration-300 project-arrow">arrow_forward</span>
+              </div>
+              <p class="text-on-surface-variant font-body-lg mb-8">Housing society management system combining vision OCR fallback (OpenCV), hybrid vector embeddings (PGVector), and Gemini Flash cleanup for automated resident Q&A.</p>
+            </div>
+            
+            <div class="flex flex-wrap gap-2">
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">PGVector</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">LangChain</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">Gemini Flash</span>
+              <span class="font-label-caps text-xs ghost-border px-3 py-1 tag-pill">OpenCV</span>
             </div>
 
             <div class="absolute inset-0 bg-surface/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
@@ -526,46 +629,6 @@
   </footer>
 
   </div><!-- End Page Content Container -->
-
-  <!-- AI Assistant Drawer (Left Anchored) -->
-  <div class="fixed inset-y-0 left-0 z-[70] w-full max-w-sm bg-surface -translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col ghost-border-r shadow-2xl" id="aiDrawer">
-    <div class="p-6 border-b border-outline-variant/30 flex justify-between items-center bg-surface-container-low">
-      <div class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-        <span class="font-label-caps text-primary font-bold">LAXMI'S AI</span>
-      </div>
-      <button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors cursor-pointer" id="closeAiDrawer">close</button>
-    </div>
-
-    <div class="flex-1 p-6 overflow-y-auto space-y-4 flex flex-col" id="chatMessagesContainer">
-      <div class="bg-surface-container p-4 rounded-lg self-start max-w-[85%] text-sm ghost-border" id="aiGreetingMsg">
-        <!-- Typewriter greeting dynamically placed here -->
-      </div>
-      
-      <!-- Suggested Prompts -->
-      <div class="flex flex-col gap-2 mt-4" id="suggestedPromptsContainer">
-        <button class="suggested-prompt-btn text-left font-label-caps text-[10px] md:text-xs ghost-border px-3 py-2 text-on-surface-variant hover:text-primary hover:border-primary transition-colors tag-pill">WHAT DID LAXMI BUILD?</button>
-        <button class="suggested-prompt-btn text-left font-label-caps text-[10px] md:text-xs ghost-border px-3 py-2 text-on-surface-variant hover:text-primary hover:border-primary transition-colors tag-pill">EXPLAIN NUANCE</button>
-        <button class="suggested-prompt-btn text-left font-label-caps text-[10px] md:text-xs ghost-border px-3 py-2 text-on-surface-variant hover:text-primary hover:border-primary transition-colors tag-pill">WHAT ARE HER AI SKILLS?</button>
-        <button class="suggested-prompt-btn text-left font-label-caps text-[10px] md:text-xs ghost-border px-3 py-2 text-on-surface-variant hover:text-primary hover:border-primary transition-colors tag-pill">TELL ME ABOUT HER EXPERIENCE?</button>
-      </div>
-    </div>
-
-    <div class="p-6 border-t border-outline-variant/30 bg-surface-container-low">
-      <div class="relative">
-        <input id="chatInput" class="w-full bg-surface border border-outline-variant/50 rounded-full py-3 pl-4 pr-12 text-sm focus:outline-none focus:border-primary text-on-surface placeholder:text-on-surface-variant/50" placeholder="Ask about her skills..." type="text" />
-        <button id="sendChatBtn" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-primary hover:bg-primary-container rounded-full transition-colors cursor-pointer">
-          <span class="material-symbols-outlined text-sm">send</span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- AI Assistant FAB Button (Left Anchored) -->
-  <button class="fixed bottom-6 left-6 md:bottom-8 md:left-8 z-40 bg-primary-container text-on-primary-container rounded-full px-5 py-3.5 flex items-center gap-3 magnetic-btn shadow-2xl border border-outline-variant/30 group cursor-pointer whitespace-nowrap transition-all duration-300" id="aiFabBtn">
-    <span class="material-symbols-outlined text-primary group-hover:rotate-12 transition-transform">auto_awesome</span>
-    <span class="font-label-caps text-label-caps font-bold">ASK LAXMI'S AI</span>
-  </button>
 
 </body>
 </html>
